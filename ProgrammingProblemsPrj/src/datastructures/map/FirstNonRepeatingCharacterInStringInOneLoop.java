@@ -7,24 +7,24 @@ import java.util.Map;
 public class FirstNonRepeatingCharacterInStringInOneLoop {
 
 	public static void main(String[] args) {
-        Character character = firstNonRepeatingCharacter("nnjkljklhihis");
+        Character character = firstNonRepeatingCharacter("nnjklrjklhihi");
         System.out.println("First Non repeating character :  " + (character != null ? character : null));
     }
 
     private static Character firstNonRepeatingCharacter(String arg) {
         char[] characters = arg.toCharArray();
-        Map<Character, Character> set = new LinkedHashMap<>();
+        Map<Character, Character> map = new LinkedHashMap<>();
         // cost of the operation is O(n)
         for (char c : characters) {
-            if (set.containsKey(c)) {
-                set.remove(c);
+            if (map.containsKey(c)) {
+                map.remove(c);
             } else {
-                set.put(c, c);
+                map.put(c, c);
             }
         }
         //here we are just getting the first value from collection
         // not iterating the whole collection and the cost of this operation is O(1)
-        Iterator<Character> iterator = set.keySet().iterator();
+        Iterator<Character> iterator = map.keySet().iterator();
         if (iterator.hasNext()) {
             return iterator.next();
         } else {
