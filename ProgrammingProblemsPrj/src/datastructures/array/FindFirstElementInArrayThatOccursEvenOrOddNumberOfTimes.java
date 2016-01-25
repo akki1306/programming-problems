@@ -19,7 +19,7 @@ public class FindFirstElementInArrayThatOccursEvenOrOddNumberOfTimes {
 		System.out.println("First even number :"
 				+ firstElementThatOccursEvenOrOddNumberOfTimes(new int[] { 1,
 						2, 1, 3, 5, 2, 1 }, EVENORODD.EVEN));
-		System.out.println("First even number :"
+		System.out.println("First odd number :"
 				+ firstElementThatOccursEvenOrOddNumberOfTimes(new int[] { 1,
 						2, 1, 3, 5, 2, 1 }, EVENORODD.ODD));
 
